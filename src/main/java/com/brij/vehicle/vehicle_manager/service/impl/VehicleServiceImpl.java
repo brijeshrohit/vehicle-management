@@ -36,7 +36,7 @@ public class VehicleServiceImpl implements VehicleService {
 
     @Override
     public Vehicle getVehicle(UUID id) {
-        return vehicleRepository.findById(id)
+        return (Vehicle) vehicleRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFound("Vehicle", id));
     }
 
