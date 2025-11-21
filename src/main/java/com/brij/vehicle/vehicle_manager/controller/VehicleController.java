@@ -11,9 +11,14 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/api/vehicles")
+@RequestMapping("/api/vehicle")
 @RequiredArgsConstructor
 public class VehicleController {
+
+    @GetMapping("/ping")
+    public String ping() {
+        return "Vehicle API working!";
+    }
 
     private final VehicleService vehicleService;
 
